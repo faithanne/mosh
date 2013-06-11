@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @request.name %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @request.year %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @request.comment %>
+</p>
+
+<p>
+  <b>Software category:</b>
+  <%= @request.software_category_id %>
+</p>
+
+<p>
+  <b>Source url:</b>
+  <%= @request.source_url %>
+</p>
+
+<p>
+  <b>Instructions:</b>
+  <%= @request.instructions %>
+</p>
+
+<p>
+  <b>Request status:</b>
+  <%= @request.request_status_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @request.user_id %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @request.image_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>

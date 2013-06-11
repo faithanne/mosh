@@ -1,0 +1,39 @@
+<h1>Listing requests</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Year</th>
+    <th>Comment</th>
+    <th>Software category</th>
+    <th>Source url</th>
+    <th>Instructions</th>
+    <th>Request status</th>
+    <th>User</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @requests.each do |request| %>
+  <tr>
+    <td><%= request.name %></td>
+    <td><%= request.year %></td>
+    <td><%= request.comment %></td>
+    <td><%= request.software_category_id %></td>
+    <td><%= request.source_url %></td>
+    <td><%= request.instructions %></td>
+    <td><%= request.request_status_id %></td>
+    <td><%= request.user_id %></td>
+    <td><%= request.image_id %></td>
+    <td><%= link_to 'Show', request %></td>
+    <td><%= link_to 'Edit', edit_request_path(request) %></td>
+    <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Request', new_request_path %>

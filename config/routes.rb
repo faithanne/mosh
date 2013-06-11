@@ -1,4 +1,7 @@
 Mosh::Application.routes.draw do
+  resources :requests
+
+
   resources :softwares
 
 
