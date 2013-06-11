@@ -1,4 +1,7 @@
 Mosh::Application.routes.draw do
+  resources :terms
+
+
   resources :semesters
 
 
