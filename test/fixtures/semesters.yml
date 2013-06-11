@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_date: 2013-06-11
+  end_date: 2013-06-11
+  advisement_start: 2013-06-11
+  term_id: 1
+  year: 2013-06-11
+  advisement_end: 2013-06-11
+
+two:
+  start_date: 2013-06-11
+  end_date: 2013-06-11
+  advisement_start: 2013-06-11
+  term_id: 1
+  year: 2013-06-11
+  advisement_end: 2013-06-11

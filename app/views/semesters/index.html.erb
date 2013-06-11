@@ -1,0 +1,33 @@
+<h1>Listing semesters</h1>
+
+<table>
+  <tr>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Advisement start</th>
+    <th>Term</th>
+    <th>Year</th>
+    <th>Advisement end</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @semesters.each do |semester| %>
+  <tr>
+    <td><%= semester.start_date %></td>
+    <td><%= semester.end_date %></td>
+    <td><%= semester.advisement_start %></td>
+    <td><%= semester.term_id %></td>
+    <td><%= semester.year %></td>
+    <td><%= semester.advisement_end %></td>
+    <td><%= link_to 'Show', semester %></td>
+    <td><%= link_to 'Edit', edit_semester_path(semester) %></td>
+    <td><%= link_to 'Destroy', semester, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Semester', new_semester_path %>
