@@ -11,16 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611022616) do
+ActiveRecord::Schema.define(:version => 20130611030019) do
 
   create_table "images", :force => true do |t|
     t.string   "name"
     t.datetime "solicit_start"
     t.datetime "submit_deadline"
     t.datetime "test_deadline"
-    t.integer  "install_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "softwares", :force => true do |t|
+    t.string   "name"
+    t.date     "year"
+    t.text     "comment"
+    t.string   "source_url"
+    t.integer  "software_category_id"
+    t.string   "version"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
   end
 
 end
