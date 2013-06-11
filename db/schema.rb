@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611030019) do
+ActiveRecord::Schema.define(:version => 20130611221025) do
 
   create_table "images", :force => true do |t|
     t.string   "name"
@@ -20,6 +20,33 @@ ActiveRecord::Schema.define(:version => 20130611030019) do
     t.datetime "test_deadline"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "installs", :force => true do |t|
+    t.integer  "image_id"
+    t.integer  "software_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "requests", :force => true do |t|
+    t.string   "name"
+    t.date     "year"
+    t.text     "comment"
+    t.integer  "software_category_id"
+    t.string   "source_url"
+    t.text     "instructions"
+    t.integer  "request_status_id"
+    t.integer  "user_id"
+    t.integer  "image_id"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+  end
+
+  create_table "software_categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "softwares", :force => true do |t|
