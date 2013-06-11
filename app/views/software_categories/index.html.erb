@@ -1,0 +1,23 @@
+<h1>Listing software_categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @software_categories.each do |software_category| %>
+  <tr>
+    <td><%= software_category.name %></td>
+    <td><%= link_to 'Show', software_category %></td>
+    <td><%= link_to 'Edit', edit_software_category_path(software_category) %></td>
+    <td><%= link_to 'Destroy', software_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Software category', new_software_category_path %>

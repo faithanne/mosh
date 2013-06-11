@@ -1,0 +1,2 @@
+module SoftwareCategoriesHelper
+end
