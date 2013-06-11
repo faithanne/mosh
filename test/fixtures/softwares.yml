@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  year: 2013-06-10
+  comment: MyText
+  source_url: MyString
+  software_category_id: 1
+  version: MyString
+  install_id: 1
+
+two:
+  name: MyString
+  year: 2013-06-10
+  comment: MyText
+  source_url: MyString
+  software_category_id: 1
+  version: MyString
+  install_id: 1

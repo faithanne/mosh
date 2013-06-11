@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @software.name %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @software.year %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @software.comment %>
+</p>
+
+<p>
+  <b>Source url:</b>
+  <%= @software.source_url %>
+</p>
+
+<p>
+  <b>Software category:</b>
+  <%= @software.software_category_id %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @software.version %>
+</p>
+
+<p>
+  <b>Install:</b>
+  <%= @software.install_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_software_path(@software) %> |
+<%= link_to 'Back', softwares_path %>
