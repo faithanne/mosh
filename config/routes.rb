@@ -1,4 +1,7 @@
 Mosh::Application.routes.draw do
+  resources :location_types
+
+
   resources :locations
 
 
