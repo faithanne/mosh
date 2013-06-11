@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @image.name %>
+</p>
+
+<p>
+  <b>Solicit start:</b>
+  <%= @image.solicit_start %>
+</p>
+
+<p>
+  <b>Submit deadline:</b>
+  <%= @image.submit_deadline %>
+</p>
+
+<p>
+  <b>Test deadline:</b>
+  <%= @image.test_deadline %>
+</p>
+
+<p>
+  <b>Install:</b>
+  <%= @image.install_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

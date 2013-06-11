@@ -1,0 +1,31 @@
+<h1>Listing images</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Solicit start</th>
+    <th>Submit deadline</th>
+    <th>Test deadline</th>
+    <th>Install</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @images.each do |image| %>
+  <tr>
+    <td><%= image.name %></td>
+    <td><%= image.solicit_start %></td>
+    <td><%= image.submit_deadline %></td>
+    <td><%= image.test_deadline %></td>
+    <td><%= image.install_id %></td>
+    <td><%= link_to 'Show', image %></td>
+    <td><%= link_to 'Edit', edit_image_path(image) %></td>
+    <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Image', new_image_path %>

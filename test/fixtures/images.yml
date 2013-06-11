@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  solicit_start: 2013-06-10 22:26:16
+  submit_deadline: 2013-06-10 22:26:16
+  test_deadline: 2013-06-10 22:26:16
+  install_id: 1
+
+two:
+  name: MyString
+  solicit_start: 2013-06-10 22:26:16
+  submit_deadline: 2013-06-10 22:26:16
+  test_deadline: 2013-06-10 22:26:16
+  install_id: 1
