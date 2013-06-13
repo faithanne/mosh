@@ -34,4 +34,7 @@ Mosh::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # setting default development url for devise
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 end
