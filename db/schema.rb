@@ -11,7 +11,57 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130613232503) do
+ActiveRecord::Schema.define(:version => 20130618224220) do
+
+  create_table "after_hours_accesses", :force => true do |t|
+    t.integer  "location_id"
+    t.integer  "semester_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "hardware_statuses", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "hardware_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "hardwares", :force => true do |t|
+    t.string   "serial_number"
+    t.string   "aasu_number"
+    t.integer  "hardware_type_id"
+    t.string   "manufacturer"
+    t.string   "model_number"
+    t.string   "assigned_to"
+    t.text     "specs"
+    t.integer  "hardware_status_id"
+    t.text     "hardware_status_comment"
+    t.integer  "workstation_id"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
+
+  create_table "hours", :force => true do |t|
+    t.string   "monday"
+    t.string   "tuesday"
+    t.string   "wednesday"
+    t.string   "thursday"
+    t.string   "friday"
+    t.string   "saturday"
+    t.string   "sunday"
+    t.integer  "semester_id"
+    t.integer  "location_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "images", :force => true do |t|
     t.string   "name"
@@ -75,6 +125,16 @@ ActiveRecord::Schema.define(:version => 20130613232503) do
     t.datetime "updated_at",       :null => false
   end
 
+  create_table "silent_installs", :force => true do |t|
+    t.string   "file_name"
+    t.string   "storage_location"
+    t.date     "creation_date"
+    t.text     "comment"
+    t.integer  "user_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
   create_table "software_categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -115,5 +175,19 @@ ActiveRecord::Schema.define(:version => 20130613232503) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "workstation_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "workstations", :force => true do |t|
+    t.integer  "location_id"
+    t.integer  "number"
+    t.integer  "workstation_type_id"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
 
 end
