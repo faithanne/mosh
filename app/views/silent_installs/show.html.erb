@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>File name:</b>
+  <%= @silent_install.file_name %>
+</p>
+
+<p>
+  <b>Storage location:</b>
+  <%= @silent_install.storage_location %>
+</p>
+
+<p>
+  <b>Creation date:</b>
+  <%= @silent_install.creation_date %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @silent_install.comment %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @silent_install.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_silent_install_path(@silent_install) %> |
+<%= link_to 'Back', silent_installs_path %>

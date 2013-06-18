@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  file_name: MyString
+  storage_location: MyString
+  creation_date: 2013-06-18
+  comment: MyText
+  user_id: 1
+
+two:
+  file_name: MyString
+  storage_location: MyString
+  creation_date: 2013-06-18
+  comment: MyText
+  user_id: 1

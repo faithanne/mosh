@@ -1,0 +1,57 @@
+<%= form_for(@hardware) do |f| %>
+  <% if @hardware.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hardware.errors.count, "error") %> prohibited this hardware from being saved:</h2>
+
+      <ul>
+      <% @hardware.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :serial_number %><br />
+    <%= f.text_field :serial_number %>
+  </div>
+  <div class="field">
+    <%= f.label :aasu_number %><br />
+    <%= f.text_field :aasu_number %>
+  </div>
+  <div class="field">
+    <%= f.label :hardware_type_id %><br />
+    <%= f.number_field :hardware_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer %><br />
+    <%= f.text_field :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.label :model_number %><br />
+    <%= f.text_field :model_number %>
+  </div>
+  <div class="field">
+    <%= f.label :assigned_to %><br />
+    <%= f.text_field :assigned_to %>
+  </div>
+  <div class="field">
+    <%= f.label :specs %><br />
+    <%= f.text_area :specs %>
+  </div>
+  <div class="field">
+    <%= f.label :hardware_status_id %><br />
+    <%= f.number_field :hardware_status_id %>
+  </div>
+  <div class="field">
+    <%= f.label :hardware_status_comment %><br />
+    <%= f.text_area :hardware_status_comment %>
+  </div>
+  <div class="field">
+    <%= f.label :workstation_id %><br />
+    <%= f.number_field :workstation_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

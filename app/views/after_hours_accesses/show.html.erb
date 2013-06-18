@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location:</b>
+  <%= @after_hours_access.location_id %>
+</p>
+
+<p>
+  <b>Semester:</b>
+  <%= @after_hours_access.semester_id %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @after_hours_access.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @after_hours_access.last_name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @after_hours_access.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_after_hours_access_path(@after_hours_access) %> |
+<%= link_to 'Back', after_hours_accesses_path %>

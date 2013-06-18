@@ -1,0 +1,2 @@
+module AfterHoursAccessesHelper
+end
