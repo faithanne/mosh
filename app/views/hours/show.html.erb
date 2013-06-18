@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Monday:</b>
+  <%= @hour.monday %>
+</p>
+
+<p>
+  <b>Tuesday:</b>
+  <%= @hour.tuesday %>
+</p>
+
+<p>
+  <b>Wednesday:</b>
+  <%= @hour.wednesday %>
+</p>
+
+<p>
+  <b>Thursday:</b>
+  <%= @hour.thursday %>
+</p>
+
+<p>
+  <b>Friday:</b>
+  <%= @hour.friday %>
+</p>
+
+<p>
+  <b>Saturday:</b>
+  <%= @hour.saturday %>
+</p>
+
+<p>
+  <b>Sunday:</b>
+  <%= @hour.sunday %>
+</p>
+
+<p>
+  <b>Semester:</b>
+  <%= @hour.semester_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @hour.location_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_hour_path(@hour) %> |
+<%= link_to 'Back', hours_path %>

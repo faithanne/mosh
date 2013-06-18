@@ -1,4 +1,7 @@
 Mosh::Application.routes.draw do
+  resources :hours
+
+
   resources :after_hours_accesses
 
 
