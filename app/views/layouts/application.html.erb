@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Mosh</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Mosh</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<div class="container">
+    <div class="container">
 
-  <% unless notice.nil? %>
-    <p class="notice"><%= notice %></p>
-  <% end %>
+      <%= render 'layouts/nav' %>
 
-  <% unless alert.nil? %>
-    <p class="alert"><%= alert %></p>
-  <% end %>
+      <%= render 'layouts/alerts' %>
 
-  <%= yield %>
+      <%= yield %>
 
-</div>
-</body>
+    </div>
+  </body>
 </html>
