@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Student tester:</b>
+  <%= @software_test.student_tester_id %>
+</p>
+
+<p>
+  <b>Student test date:</b>
+  <%= @software_test.student_test_date %>
+</p>
+
+<p>
+  <b>Faculty tester:</b>
+  <%= @software_test.faculty_tester_id %>
+</p>
+
+<p>
+  <b>Faculty test date:</b>
+  <%= @software_test.faculty_test_date %>
+</p>
+
+<p>
+  <b>Email confirmation date:</b>
+  <%= @software_test.email_confirmation_date %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @software_test.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_software_test_path(@software_test) %> |
+<%= link_to 'Back', software_tests_path %>

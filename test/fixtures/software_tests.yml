@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student_tester_id: 1
+  student_test_date: 2013-06-19
+  faculty_tester_id: 1
+  faculty_test_date: 2013-06-19
+  email_confirmation_date: 2013-06-19
+  comment: MyText
+
+two:
+  student_tester_id: 1
+  student_test_date: 2013-06-19
+  faculty_tester_id: 1
+  faculty_test_date: 2013-06-19
+  email_confirmation_date: 2013-06-19
+  comment: MyText
