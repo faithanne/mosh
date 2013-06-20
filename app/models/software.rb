@@ -4,6 +4,6 @@ class Software < ActiveRecord::Base
   has_many :softwares, through: :installs
   belongs_to :software_category
   has_many :silent_installs
-  has_many :software_test
+  has_many :software_tests
   has_many :requests
 end
