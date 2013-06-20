@@ -1,9 +1,9 @@
 <div class="navbar">
   <div class="navbar-inner">
-    <%= link_to 'MOSH', root_url, class: 'brand' %>
+    <%= link_to 'mosh', root_url, class: 'brand' %>
 
     <ul class="nav">
-     <li class="divider-vertical"></li>
+     <!--<li class="divider-vertical"></li>-->
 
      <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -18,34 +18,55 @@
         </ul>
      </li>
 
-     <li class="divider-vertical"></li>
+     <!--<li class="divider-vertical"></li>-->
      <li>
        <%= link_to '#' do %>
-        <i class="icon-print"></i>
-        Posters
+       <i class="icon-print"></i>
+       Posters
        <% end %>
      </li>
-      <li class="divider-vertical"></li>
+      <!--<li class="divider-vertical"></li>-->
       <li>
         <%= link_to '#' do %>
-          Work Orders
+        <i class="icon-pushpin"></i>
+        Work Orders
         <% end %>
       </li>
-      <li class="divider-vertical"></li>
-      <li><%= link_to 'Supplies', '#' %></li>
-      <li class="divider-vertical"></li>
-      <li><%= link_to 'Advisement', '#' %></li>
+      <!--<li class="divider-vertical"></li>-->
+      <li>
+        <%= link_to '#' do %>
+        <i class="icon-check"></i>
+        Supplies
+        <% end %>
+      </li>
+      <!--<li class="divider-vertical"></li>-->
+      <li>
+        <%= link_to '#' do %>
+        <i class="icon-list-alt"></i>
+        Advisement
+        <% end %>
+      </li>
     </ul>
 
     <div class="btn-group pull-right">
       <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-        admin
+        Hello!
         <span class="caret"></span>
       </a>
       <ul class ="dropdown-menu">
-        <li><%= link_to 'Preferences', '#' %></li>
+        <li>
+          <%= link_to '#' do %>
+          <i class="icon-cogs"></i>
+          Preferences
+          <% end %>
+        </li>
         <li class="divider"></li>
-        <li><%= link_to 'Logout', '#' %></li>
+        <li>
+          <%= link_to '#' do %>
+          <i class="icon-off"></i>
+          Sign Out
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
