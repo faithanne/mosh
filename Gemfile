@@ -23,4 +23,5 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'bootstrap-sass', '~> 2.3.2.0'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'bootswatch-rails'
