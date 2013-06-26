@@ -1,6 +1,6 @@
 <h1>Listing requests</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Name</th>
     <th>Year</th>
@@ -11,6 +11,7 @@
     <th>Request status</th>
     <th>User</th>
     <th>Image</th>
+    <th>Software Reference</th>
     <th></th>
     <th></th>
     <th></th>
@@ -27,6 +28,7 @@
     <td><%= request.request_status_id %></td>
     <td><%= request.user_id %></td>
     <td><%= request.image_id %></td>
+    <td><%= request.software_id %></td>
     <td><%= link_to 'Show', request %></td>
     <td><%= link_to 'Edit', edit_request_path(request) %></td>
     <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>

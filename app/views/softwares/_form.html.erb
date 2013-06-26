@@ -4,9 +4,9 @@
       <h2><%= pluralize(@software.errors.count, "error") %> prohibited this software from being saved:</h2>
 
       <ul>
-      <% @software.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @software.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -34,6 +34,14 @@
   <div class="field">
     <%= f.label :version %><br />
     <%= f.text_field :version %>
+  </div>
+  <div class="field">
+    <%= f.label :silent_install_id %><br />
+    <%= f.number_field :silent_install_id %>
+  </div>
+  <div class="field">
+    <%= f.label :software_test_id %><br />
+    <%= f.number_field :software_test_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

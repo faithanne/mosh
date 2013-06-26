@@ -30,5 +30,16 @@
   <%= @software.version %>
 </p>
 
+<p>
+  <b>Silent Install:</b>
+  <%= @software.silent_install_id %>
+</p>
+
+<p>
+  <b>Software Test:</b>
+  <%= @software.software_test_id %>
+</p>
+
+
 <%= link_to 'Edit', edit_software_path(@software) %> |
 <%= link_to 'Back', softwares_path %>

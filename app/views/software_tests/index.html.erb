@@ -1,6 +1,6 @@
 <h1>Listing software_tests</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Student tester</th>
     <th>Student test date</th>
@@ -8,6 +8,7 @@
     <th>Faculty test date</th>
     <th>Email confirmation date</th>
     <th>Comment</th>
+    <th>Software</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,6 +22,7 @@
     <td><%= software_test.faculty_test_date %></td>
     <td><%= software_test.email_confirmation_date %></td>
     <td><%= software_test.comment %></td>
+    <td><%= software_test.software_id %></td>
     <td><%= link_to 'Show', software_test %></td>
     <td><%= link_to 'Edit', edit_software_test_path(software_test) %></td>
     <td><%= link_to 'Destroy', software_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>

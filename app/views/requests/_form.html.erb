@@ -4,9 +4,9 @@
       <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
 
       <ul>
-      <% @request.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @request.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -47,6 +47,11 @@
     <%= f.label :image_id %><br />
     <%= f.number_field :image_id %>
   </div>
+  <div class="field">
+    <%= f.label :software_id %><br />
+    <%= f.number_field :software_id %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
