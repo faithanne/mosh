@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130619201137) do
+ActiveRecord::Schema.define(:version => 20130626044228) do
 
   create_table "after_hours_accesses", :force => true do |t|
     t.integer  "location_id"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20130619201137) do
   create_table "hardware_statuses", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "name"
   end
 
   create_table "hardware_types", :force => true do |t|
@@ -112,6 +113,7 @@ ActiveRecord::Schema.define(:version => 20130619201137) do
     t.integer  "image_id"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.integer  "software_id"
   end
 
   create_table "semesters", :force => true do |t|
@@ -133,6 +135,7 @@ ActiveRecord::Schema.define(:version => 20130619201137) do
     t.integer  "user_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.integer  "software_id"
   end
 
   create_table "software_categories", :force => true do |t|
@@ -150,6 +153,7 @@ ActiveRecord::Schema.define(:version => 20130619201137) do
     t.text     "comment"
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
+    t.integer  "software_id"
   end
 
   create_table "softwares", :force => true do |t|
@@ -161,6 +165,8 @@ ActiveRecord::Schema.define(:version => 20130619201137) do
     t.string   "version"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.integer  "silent_install_id"
+    t.integer  "software_test_id"
   end
 
   create_table "terms", :force => true do |t|
