@@ -1,0 +1,133 @@
+          software_tests GET    /software_tests(.:format)                software_tests#index
+                         POST   /software_tests(.:format)                software_tests#create
+       new_software_test GET    /software_tests/new(.:format)            software_tests#new
+      edit_software_test GET    /software_tests/:id/edit(.:format)       software_tests#edit
+           software_test GET    /software_tests/:id(.:format)            software_tests#show
+                         PUT    /software_tests/:id(.:format)            software_tests#update
+                         DELETE /software_tests/:id(.:format)            software_tests#destroy
+                   hours GET    /hours(.:format)                         hours#index
+                         POST   /hours(.:format)                         hours#create
+                new_hour GET    /hours/new(.:format)                     hours#new
+               edit_hour GET    /hours/:id/edit(.:format)                hours#edit
+                    hour GET    /hours/:id(.:format)                     hours#show
+                         PUT    /hours/:id(.:format)                     hours#update
+                         DELETE /hours/:id(.:format)                     hours#destroy
+    after_hours_accesses GET    /after_hours_accesses(.:format)          after_hours_accesses#index
+                         POST   /after_hours_accesses(.:format)          after_hours_accesses#create
+  new_after_hours_access GET    /after_hours_accesses/new(.:format)      after_hours_accesses#new
+ edit_after_hours_access GET    /after_hours_accesses/:id/edit(.:format) after_hours_accesses#edit
+      after_hours_access GET    /after_hours_accesses/:id(.:format)      after_hours_accesses#show
+                         PUT    /after_hours_accesses/:id(.:format)      after_hours_accesses#update
+                         DELETE /after_hours_accesses/:id(.:format)      after_hours_accesses#destroy
+          hardware_types GET    /hardware_types(.:format)                hardware_types#index
+                         POST   /hardware_types(.:format)                hardware_types#create
+       new_hardware_type GET    /hardware_types/new(.:format)            hardware_types#new
+      edit_hardware_type GET    /hardware_types/:id/edit(.:format)       hardware_types#edit
+           hardware_type GET    /hardware_types/:id(.:format)            hardware_types#show
+                         PUT    /hardware_types/:id(.:format)            hardware_types#update
+                         DELETE /hardware_types/:id(.:format)            hardware_types#destroy
+       hardware_statuses GET    /hardware_statuses(.:format)             hardware_statuses#index
+                         POST   /hardware_statuses(.:format)             hardware_statuses#create
+     new_hardware_status GET    /hardware_statuses/new(.:format)         hardware_statuses#new
+    edit_hardware_status GET    /hardware_statuses/:id/edit(.:format)    hardware_statuses#edit
+         hardware_status GET    /hardware_statuses/:id(.:format)         hardware_statuses#show
+                         PUT    /hardware_statuses/:id(.:format)         hardware_statuses#update
+                         DELETE /hardware_statuses/:id(.:format)         hardware_statuses#destroy
+               hardwares GET    /hardwares(.:format)                     hardwares#index
+                         POST   /hardwares(.:format)                     hardwares#create
+            new_hardware GET    /hardwares/new(.:format)                 hardwares#new
+           edit_hardware GET    /hardwares/:id/edit(.:format)            hardwares#edit
+                hardware GET    /hardwares/:id(.:format)                 hardwares#show
+                         PUT    /hardwares/:id(.:format)                 hardwares#update
+                         DELETE /hardwares/:id(.:format)                 hardwares#destroy
+       workstation_types GET    /workstation_types(.:format)             workstation_types#index
+                         POST   /workstation_types(.:format)             workstation_types#create
+    new_workstation_type GET    /workstation_types/new(.:format)         workstation_types#new
+   edit_workstation_type GET    /workstation_types/:id/edit(.:format)    workstation_types#edit
+        workstation_type GET    /workstation_types/:id(.:format)         workstation_types#show
+                         PUT    /workstation_types/:id(.:format)         workstation_types#update
+                         DELETE /workstation_types/:id(.:format)         workstation_types#destroy
+            workstations GET    /workstations(.:format)                  workstations#index
+                         POST   /workstations(.:format)                  workstations#create
+         new_workstation GET    /workstations/new(.:format)              workstations#new
+        edit_workstation GET    /workstations/:id/edit(.:format)         workstations#edit
+             workstation GET    /workstations/:id(.:format)              workstations#show
+                         PUT    /workstations/:id(.:format)              workstations#update
+                         DELETE /workstations/:id(.:format)              workstations#destroy
+         silent_installs GET    /silent_installs(.:format)               silent_installs#index
+                         POST   /silent_installs(.:format)               silent_installs#create
+      new_silent_install GET    /silent_installs/new(.:format)           silent_installs#new
+     edit_silent_install GET    /silent_installs/:id/edit(.:format)      silent_installs#edit
+          silent_install GET    /silent_installs/:id(.:format)           silent_installs#show
+                         PUT    /silent_installs/:id(.:format)           silent_installs#update
+                         DELETE /silent_installs/:id(.:format)           silent_installs#destroy
+        new_user_session GET    /users/sign_in(.:format)                 devise/sessions#new
+            user_session POST   /users/sign_in(.:format)                 devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)                devise/sessions#destroy
+           user_password POST   /users/password(.:format)                devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)            devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format)           devise/passwords#edit
+                         PUT    /users/password(.:format)                devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)                  devise/registrations#cancel
+       user_registration POST   /users(.:format)                         devise/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)                 devise/registrations#new
+  edit_user_registration GET    /users/edit(.:format)                    devise/registrations#edit
+                         PUT    /users(.:format)                         devise/registrations#update
+                         DELETE /users(.:format)                         devise/registrations#destroy
+          location_types GET    /location_types(.:format)                location_types#index
+                         POST   /location_types(.:format)                location_types#create
+       new_location_type GET    /location_types/new(.:format)            location_types#new
+      edit_location_type GET    /location_types/:id/edit(.:format)       location_types#edit
+           location_type GET    /location_types/:id(.:format)            location_types#show
+                         PUT    /location_types/:id(.:format)            location_types#update
+                         DELETE /location_types/:id(.:format)            location_types#destroy
+               locations GET    /locations(.:format)                     locations#index
+                         POST   /locations(.:format)                     locations#create
+            new_location GET    /locations/new(.:format)                 locations#new
+           edit_location GET    /locations/:id/edit(.:format)            locations#edit
+                location GET    /locations/:id(.:format)                 locations#show
+                         PUT    /locations/:id(.:format)                 locations#update
+                         DELETE /locations/:id(.:format)                 locations#destroy
+                   terms GET    /terms(.:format)                         terms#index
+                         POST   /terms(.:format)                         terms#create
+                new_term GET    /terms/new(.:format)                     terms#new
+               edit_term GET    /terms/:id/edit(.:format)                terms#edit
+                    term GET    /terms/:id(.:format)                     terms#show
+                         PUT    /terms/:id(.:format)                     terms#update
+                         DELETE /terms/:id(.:format)                     terms#destroy
+               semesters GET    /semesters(.:format)                     semesters#index
+                         POST   /semesters(.:format)                     semesters#create
+            new_semester GET    /semesters/new(.:format)                 semesters#new
+           edit_semester GET    /semesters/:id/edit(.:format)            semesters#edit
+                semester GET    /semesters/:id(.:format)                 semesters#show
+                         PUT    /semesters/:id(.:format)                 semesters#update
+                         DELETE /semesters/:id(.:format)                 semesters#destroy
+     software_categories GET    /software_categories(.:format)           software_categories#index
+                         POST   /software_categories(.:format)           software_categories#create
+   new_software_category GET    /software_categories/new(.:format)       software_categories#new
+  edit_software_category GET    /software_categories/:id/edit(.:format)  software_categories#edit
+       software_category GET    /software_categories/:id(.:format)       software_categories#show
+                         PUT    /software_categories/:id(.:format)       software_categories#update
+                         DELETE /software_categories/:id(.:format)       software_categories#destroy
+                requests GET    /requests(.:format)                      requests#index
+                         POST   /requests(.:format)                      requests#create
+             new_request GET    /requests/new(.:format)                  requests#new
+            edit_request GET    /requests/:id/edit(.:format)             requests#edit
+                 request GET    /requests/:id(.:format)                  requests#show
+                         PUT    /requests/:id(.:format)                  requests#update
+                         DELETE /requests/:id(.:format)                  requests#destroy
+               softwares GET    /softwares(.:format)                     softwares#index
+                         POST   /softwares(.:format)                     softwares#create
+            new_software GET    /softwares/new(.:format)                 softwares#new
+           edit_software GET    /softwares/:id/edit(.:format)            softwares#edit
+                software GET    /softwares/:id(.:format)                 softwares#show
+                         PUT    /softwares/:id(.:format)                 softwares#update
+                         DELETE /softwares/:id(.:format)                 softwares#destroy
+                  images GET    /images(.:format)                        images#index
+                         POST   /images(.:format)                        images#create
+               new_image GET    /images/new(.:format)                    images#new
+              edit_image GET    /images/:id/edit(.:format)               images#edit
+                   image GET    /images/:id(.:format)                    images#show
+                         PUT    /images/:id(.:format)                    images#update
+                         DELETE /images/:id(.:format)                    images#destroy
+                    root        /                                        images#index
