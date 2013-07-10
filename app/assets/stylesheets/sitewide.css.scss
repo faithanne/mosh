@@ -1,15 +1,26 @@
 .nav {
-    font-size: 14px;
+    font-size: 15px;
 }
-
+/*
 .nav li > img {
     padding-right: 8px;
     padding-top: 12px;
     padding-left: 3px;
 }
-
+*/
 .nav li {
-    padding-right: 7px;
+    padding-right: 9px;
+    padding-top: 3px;
+}
+
+.navbar-inner {
+    min-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar .nav li > a {
+    padding-top: 10px;
 }
 
 .navbar .nav li > a:hover {
@@ -17,12 +28,13 @@
 }
 
 .btn-group.pull-right {
-    margin: 6px;
-    padding-top: 5px;
+    margin: 3px;
+    padding-top: 2px;
 }
 
 .btn.dropdown-toggle {
     font-size: 12px;
+    padding-top: 5px;
 }
 
 .dropdown-menu li {
