@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :hardware_type_id %><br />
-    <%= f.number_field :hardware_type_id %>
+    <%= f.collection_select(:hardware_type_id, HardwareType.all, :id, :name) %>
+   <!-- <%= f.number_field :hardware_type_id %> -->
   </div>
   <div class="field">
     <%= f.label :manufacturer %><br />

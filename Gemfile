@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -25,3 +25,4 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 2.3.2.0'
 gem 'font-awesome-rails'
 gem 'bootswatch-rails'
+gem 'simple_form'
