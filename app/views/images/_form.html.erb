@@ -1,33 +1,7 @@
-<%= form_for(@image) do |f| %>
-  <% if @image.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@image.errors.count, "error") %> prohibited this image from being saved:</h2>
-
-      <ul>
-      <% @image.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :solicit_start %><br />
-    <%= f.datetime_select :solicit_start %>
-  </div>
-  <div class="field">
-    <%= f.label :submit_deadline %><br />
-    <%= f.datetime_select :submit_deadline %>
-  </div>
-  <div class="field">
-    <%= f.label :test_deadline %><br />
-    <%= f.datetime_select :test_deadline %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@image, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :name, label: 'Image name' %>
+  <%= f.input :solicit_start %>
+  <%= f.input :submit_deadline %>
+  <%= f.input :test_deadline %>
+  <%= f.button :submit %>
 <% end %>

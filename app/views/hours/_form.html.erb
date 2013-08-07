@@ -1,53 +1,12 @@
-<%= form_for(@hour) do |f| %>
-  <% if @hour.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@hour.errors.count, "error") %> prohibited this hour from being saved:</h2>
-
-      <ul>
-      <% @hour.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :monday %><br />
-    <%= f.text_field :monday %>
-  </div>
-  <div class="field">
-    <%= f.label :tuesday %><br />
-    <%= f.text_field :tuesday %>
-  </div>
-  <div class="field">
-    <%= f.label :wednesday %><br />
-    <%= f.text_field :wednesday %>
-  </div>
-  <div class="field">
-    <%= f.label :thursday %><br />
-    <%= f.text_field :thursday %>
-  </div>
-  <div class="field">
-    <%= f.label :friday %><br />
-    <%= f.text_field :friday %>
-  </div>
-  <div class="field">
-    <%= f.label :saturday %><br />
-    <%= f.text_field :saturday %>
-  </div>
-  <div class="field">
-    <%= f.label :sunday %><br />
-    <%= f.text_field :sunday %>
-  </div>
-  <div class="field">
-    <%= f.label :semester_id %><br />
-    <%= f.number_field :semester_id %>
-  </div>
-  <div class="field">
-    <%= f.label :location_id %><br />
-    <%= f.number_field :location_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@hour, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :monday, label: 'Monday' %>
+  <%= f.input :tuesday, label: 'Tuesday' %>
+  <%= f.input :wednesday, label: 'Wednesday' %>
+  <%= f.input :thursday, label: 'Thursday' %>
+  <%= f.input :friday, label: 'Friday' %>
+  <%= f.input :saturday, label: 'Saturday' %>
+  <%= f.input :sunday, label: 'Sunday' %>
+  <%= f.association :semester, label_method: :term, value_method: :id %>
+  <%= f.association :location, label_method: :room, value_method: :id %>
+  <%= f.button :submit %>
 <% end %>

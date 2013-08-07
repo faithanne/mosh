@@ -1,33 +1,6 @@
-<%= form_for(@location) do |f| %>
-  <% if @location.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
-
-      <ul>
-      <% @location.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :room %><br />
-    <%= f.text_field :room %>
-  </div>
-  <div class="field">
-    <%= f.label :location_type_id %><br />
-    <%= f.number_field :location_type_id %>
-  </div>
-  <div class="field">
-    <%= f.label :comment %><br />
-    <%= f.text_area :comment %>
-  </div>
-  <div class="field">
-    <%= f.label :workstation_id %><br />
-    <%= f.number_field :workstation_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@location, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :room %>
+  <%= f.association :location_type %>
+  <%= f.input :comment %>
+  <%= f.button :submit %>
 <% end %>

@@ -1,29 +1,6 @@
-<%= form_for(@workstation) do |f| %>
-  <% if @workstation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@workstation.errors.count, "error") %> prohibited this workstation from being saved:</h2>
-
-      <ul>
-      <% @workstation.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :location_id %><br />
-    <%= f.number_field :location_id %>
-  </div>
-  <div class="field">
-    <%= f.label :number %><br />
-    <%= f.number_field :number %>
-  </div>
-  <div class="field">
-    <%= f.label :workstation_type_id %><br />
-    <%= f.number_field :workstation_type_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@workstation, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.association :location, label_method: :room %>
+  <%= f.input :number, label: 'Workstation number' %>
+  <%= f.association :workstation_type %>
+  <%= f.button :submit %>
 <% end %>

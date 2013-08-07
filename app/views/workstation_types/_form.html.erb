@@ -1,21 +1,4 @@
-<%= form_for(@workstation_type) do |f| %>
-  <% if @workstation_type.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@workstation_type.errors.count, "error") %> prohibited this workstation_type from being saved:</h2>
-
-      <ul>
-      <% @workstation_type.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@workstation_type, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :name, label: 'Workstation type' %>
+  <%= f.button :submit %>
 <% end %>

@@ -1,41 +1,9 @@
-<%= form_for(@semester) do |f| %>
-  <% if @semester.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@semester.errors.count, "error") %> prohibited this semester from being saved:</h2>
-
-      <ul>
-      <% @semester.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :start_date %><br />
-    <%= f.date_select :start_date %>
-  </div>
-  <div class="field">
-    <%= f.label :end_date %><br />
-    <%= f.date_select :end_date %>
-  </div>
-  <div class="field">
-    <%= f.label :advisement_start %><br />
-    <%= f.date_select :advisement_start %>
-  </div>
-  <div class="field">
-    <%= f.label :term_id %><br />
-    <%= f.number_field :term_id %>
-  </div>
-  <div class="field">
-    <%= f.label :year %><br />
-    <%= f.date_select :year %>
-  </div>
-  <div class="field">
-    <%= f.label :advisement_end %><br />
-    <%= f.date_select :advisement_end %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@semester, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :advisement_start %>
+  <%= f.association :term %>
+  <%= f.input :year %>
+  <%= f.input :advisement_end %>
+  <%= f.button :submit %>
 <% end %>

@@ -1,21 +1,4 @@
-<%= form_for(@hardware_type) do |f| %>
-  <% if @hardware_type.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@hardware_type.errors.count, "error") %> prohibited this hardware_type from being saved:</h2>
-
-      <ul>
-      <% @hardware_type.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@hardware_type, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :name, label: 'Hardware Type Name' %>
+  <%= f.button :submit %>
 <% end %>
