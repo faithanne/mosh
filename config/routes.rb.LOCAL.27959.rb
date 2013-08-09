@@ -2,9 +2,6 @@ Mosh::Application.routes.draw do
   resources :installs
 
 
-  resources :request_statuses
-
-
   resources :software_tests
 
 
@@ -34,7 +31,6 @@ Mosh::Application.routes.draw do
 
   devise_for :users
 
-
   resources :location_types
 
 
@@ -57,7 +53,6 @@ Mosh::Application.routes.draw do
 
 
   resources :images
-
 
   root to: 'images#index'
 end
