@@ -2,6 +2,7 @@
 
 <table class="table table-bordered table-striped">
   <tr>
+    <th>Name</th>
     <th>Start date</th>
     <th>End date</th>
     <th>Advisement start</th>
@@ -15,6 +16,7 @@
 
 <% @semesters.each do |semester| %>
   <tr>
+    <td><%= semester.name %></td>
     <td><%= semester.start_date %></td>
     <td><%= semester.end_date %></td>
     <td><%= semester.advisement_start %></td>

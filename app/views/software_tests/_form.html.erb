@@ -5,6 +5,6 @@
   <%= f.input :faculty_test_date %>
   <%= f.input :email_confirmation_date %>
   <%= f.input :comment %>
-  <%= f.association :software %>
+  <%= f.association :software, label_method: :name, value_method: id %>
   <%= f.button :submit %>
 <% end %>

@@ -6,7 +6,7 @@
   <%= f.input :friday, label: 'Friday' %>
   <%= f.input :saturday, label: 'Saturday' %>
   <%= f.input :sunday, label: 'Sunday' %>
-  <%= f.association :semester, label_method: :term, value_method: :id %>
+  <%= f.association :semester, label_method: :name, value_method: :id %>
   <%= f.association :location, label_method: :room, value_method: :id %>
   <%= f.button :submit %>
 <% end %>

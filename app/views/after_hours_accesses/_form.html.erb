@@ -1,6 +1,6 @@
 <%= simple_form_for(@after_hours_access, html: { class: 'form-horizontal' }) do |f| %>
   <%= f.association :location, label_method: :room, value_method: :id %>
-  <%= f.association :semester, label_method: :term, value_method: :id %>
+  <%= f.association :semester, label_method: :name, value_method: :id %>
   <%= f.input :first_name, label: 'First Name' %>
   <%= f.input :last_name , label: 'Last Name' %>
   <%= f.association :user, label: 'Authorized By', label_method: :email, value_method: :id %>
