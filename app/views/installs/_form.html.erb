@@ -1,12 +1,5 @@
-<%= simple_form_for(@install) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :image_id %>
-    <%= f.input :software_id %>
-  </div>
-
-  <div class="form-actions">
+<%= simple_form_for(@install, html: { class: 'form-horizontal' }) do |f| %>
+    <%= f.association :image %>
+    <%= f.association :software %>
     <%= f.button :submit %>
-  </div>
 <% end %>
