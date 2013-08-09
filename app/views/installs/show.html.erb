@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Image:</b>
+  <%= @install.image_id %>
+</p>
+
+<p>
+  <b>Software:</b>
+  <%= @install.software_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_install_path(@install) %> |
+<%= link_to 'Back', installs_path %>

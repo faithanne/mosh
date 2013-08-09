@@ -1,0 +1,25 @@
+<h1>Listing installs</h1>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Software</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @installs.each do |install| %>
+  <tr>
+    <td><%= install.image_id %></td>
+    <td><%= install.software_id %></td>
+    <td><%= link_to 'Show', install %></td>
+    <td><%= link_to 'Edit', edit_install_path(install) %></td>
+    <td><%= link_to 'Destroy', install, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Install', new_install_path %>
