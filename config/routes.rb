@@ -1,4 +1,7 @@
 Mosh::Application.routes.draw do
+  resources :request_statuses
+
+
   resources :software_tests
 
 
