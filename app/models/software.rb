@@ -1,5 +1,5 @@
 class Software < ActiveRecord::Base
-  attr_accessible :comment, :name, :software_category_id, :source_url, :version, :year
+  attr_accessible :comment, :name, :software_category_id, :source_url, :version, :year, :software_install_id, :software_test_id
   has_many :installs
   has_many :softwares, through: :installs
   belongs_to :software_category
