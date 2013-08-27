@@ -40,6 +40,10 @@ Mosh::Application.routes.draw do
 
   resources :locations
 
+  namespace :admin do
+    resources :users
+  end
+
 
   resources :terms
 

@@ -1,3 +1,17 @@
+                installs GET    /installs(.:format)                      installs#index
+                         POST   /installs(.:format)                      installs#create
+             new_install GET    /installs/new(.:format)                  installs#new
+            edit_install GET    /installs/:id/edit(.:format)             installs#edit
+                 install GET    /installs/:id(.:format)                  installs#show
+                         PUT    /installs/:id(.:format)                  installs#update
+                         DELETE /installs/:id(.:format)                  installs#destroy
+        request_statuses GET    /request_statuses(.:format)              request_statuses#index
+                         POST   /request_statuses(.:format)              request_statuses#create
+      new_request_status GET    /request_statuses/new(.:format)          request_statuses#new
+     edit_request_status GET    /request_statuses/:id/edit(.:format)     request_statuses#edit
+          request_status GET    /request_statuses/:id(.:format)          request_statuses#show
+                         PUT    /request_statuses/:id(.:format)          request_statuses#update
+                         DELETE /request_statuses/:id(.:format)          request_statuses#destroy
           software_tests GET    /software_tests(.:format)                software_tests#index
                          POST   /software_tests(.:format)                software_tests#create
        new_software_test GET    /software_tests/new(.:format)            software_tests#new
@@ -88,6 +102,13 @@ cancel_user_registration GET    /users/cancel(.:format)                  devise/
                 location GET    /locations/:id(.:format)                 locations#show
                          PUT    /locations/:id(.:format)                 locations#update
                          DELETE /locations/:id(.:format)                 locations#destroy
+             admin_users GET    /admin/users(.:format)                   admin/users#index
+                         POST   /admin/users(.:format)                   admin/users#create
+          new_admin_user GET    /admin/users/new(.:format)               admin/users#new
+         edit_admin_user GET    /admin/users/:id/edit(.:format)          admin/users#edit
+              admin_user GET    /admin/users/:id(.:format)               admin/users#show
+                         PUT    /admin/users/:id(.:format)               admin/users#update
+                         DELETE /admin/users/:id(.:format)               admin/users#destroy
                    terms GET    /terms(.:format)                         terms#index
                          POST   /terms(.:format)                         terms#create
                 new_term GET    /terms/new(.:format)                     terms#new

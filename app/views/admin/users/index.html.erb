@@ -1,0 +1,31 @@
+<h1>Users</h1>
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Management</th>
+    <th>Admin</th>
+    <th>Created at</th>
+    <th>Last sign-in</th>
+    <th>Last IP</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td><%= user.management %></td>
+    <td><%= user.admin %></td>
+    <td><%= user.created_at %></td>
+    <td><%= user.last_sign_in_at %></td>
+    <td><%= user.last_sign_in_ip %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_admin_user(admin, user) %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+<% end %>
+</table>
