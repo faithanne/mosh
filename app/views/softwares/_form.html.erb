@@ -1,49 +1,11 @@
-<%= form_for(@software) do |f| %>
-  <% if @software.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@software.errors.count, "error") %> prohibited this software from being saved:</h2>
-
-      <ul>
-        <% @software.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :year %><br />
-    <%= f.date_select :year %>
-  </div>
-  <div class="field">
-    <%= f.label :comment %><br />
-    <%= f.text_area :comment %>
-  </div>
-  <div class="field">
-    <%= f.label :source_url %><br />
-    <%= f.text_field :source_url %>
-  </div>
-  <div class="field">
-    <%= f.label :software_category_id %><br />
-    <%= f.number_field :software_category_id %>
-  </div>
-  <div class="field">
-    <%= f.label :version %><br />
-    <%= f.text_field :version %>
-  </div>
-  <div class="field">
-    <%= f.label :silent_install_id %><br />
-    <%= f.number_field :silent_install_id %>
-  </div>
-  <div class="field">
-    <%= f.label :software_test_id %><br />
-    <%= f.number_field :software_test_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@software, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :year %>
+  <%= f.input :comment %>
+  <%= f.input :source_url %>
+  <%= f.association :software_category %>
+  <%= f.input :version %>
+  <%= f.association :silent_install %>
+  <%= f.association :software_test %>
+  <%= f.button :submit %>
 <% end %>
