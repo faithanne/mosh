@@ -1,39 +1,53 @@
+<ul class="nav pull-right">
+<% if !user_signed_in? %>
+  <li><%= link_to new_user_session_path do %>
+  Sign In
+  <% end %></li>
+<% else %>
 <div class="btn-group pull-right">
-  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-    Hello, User!
-    <span class="caret"></span>
+  <a class="btn dropdown-toggle" data-toggle="dropdown">
+    <% if user_signed_in? %>
+    Hello <%= current_user.email %>!
+    <% else %>
+      <%= link_to new_user_session_path do %>
+      Sign In
+      <% end %>
+    <% end %>
+      <span class="caret"></span>
   </a>
   <ul class ="dropdown-menu">
     <li>
       <%= link_to '#' do %>
       <i class="icon-terminal"></i>
       Advanced
-      <% end %>
+    <% end %>
     </li>
     <li>
       <%= link_to '#' do %>
       <i class="icon-compass"></i>
       Site Map
-      <% end %>
+    <% end %>
     </li>
     <li>
       <%= link_to '#' do %>
       <i class="icon-list"></i>
       Index of Tables
-      <% end %>
+    <% end %>
     </li>
     <li>
       <%= link_to '#' do %>
       <i class="icon-cogs"></i>
       Preferences
-      <% end %>
+    <% end %>
     </li>
     <li class="divider"></li>
     <li>
-      <%= link_to '#' do %>
+      <%= link_to destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } do %>
       <i class="icon-signout"></i>
       Sign Out
-      <% end %>
+    <% end %>
     </li>
   </ul>
 </div>
+<% end %>
+</ul>
