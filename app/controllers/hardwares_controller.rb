@@ -1,4 +1,9 @@
 class HardwaresController < ApplicationController
+
+require "#{Rails.root}/lib/mosh_modules/noncsit_module"
+include MoshModules::NoncsitModule
+before_filter :non_csit
+
   # GET /hardwares
   # GET /hardwares.json
   def index

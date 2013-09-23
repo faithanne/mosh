@@ -1,4 +1,9 @@
 class RequestStatusesController < ApplicationController
+
+require "#{Rails.root}/lib/mosh_modules/management_module"
+include MoshModules::ManagementModule
+before_filter :management_filter
+
   # GET /request_statuses
   # GET /request_statuses.json
   def index

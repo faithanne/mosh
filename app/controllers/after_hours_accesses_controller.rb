@@ -1,5 +1,10 @@
 class AfterHoursAccessesController < ApplicationController
-  # GET /after_hours_accesses
+
+require "#{Rails.root}/lib/mosh_modules/noncsit_module"
+include MoshModules::NoncsitModule
+before_filter :noncsit_filter
+
+ # GET /after_hours_accesses
   # GET /after_hours_accesses.json
   def index
     @after_hours_accesses = AfterHoursAccess.all
