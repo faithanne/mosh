@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130826205431) do
+ActiveRecord::Schema.define(:version => 20130916205508) do
 
   create_table "after_hours_accesses", :force => true do |t|
     t.integer  "location_id"
@@ -191,6 +191,7 @@ ActiveRecord::Schema.define(:version => 20130826205431) do
     t.datetime "updated_at",                             :null => false
     t.boolean  "management"
     t.boolean  "admin"
+    t.string   "name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :management, :admin
   # attr_accessible :title, :body
+
+  validates :password, presence: :true, length: { minimum: 8, maximum: 120 }, on: :create
+  validates :password, on: :update, length: {minimum: 8, maximum: 120}, allow_blank: true
 end
