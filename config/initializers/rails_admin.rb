@@ -15,7 +15,7 @@ RailsAdmin.config do |config|
   config.current_user_method { current_user } # auto-generated
 
   # If you want to track changes on your models:
-  # config.audit_with :history, 'User'
+  config.audit_with :history, 'User'
 
   # Or with a PaperTrail: (you need to install it first)
   # config.audit_with :paper_trail, 'User'
@@ -60,20 +60,20 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :location, :belongs_to_association 
-  #     configure :semester, :belongs_to_association 
-  #     configure :user, :belongs_to_association 
+  #     configure :location, :belongs_to_association
+  #     configure :semester, :belongs_to_association
+  #     configure :user, :belongs_to_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :location_id, :integer         # Hidden 
-  #     configure :semester_id, :integer         # Hidden 
-  #     configure :first_name, :string 
-  #     configure :last_name, :string 
-  #     configure :user_id, :integer         # Hidden 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :location_id, :integer         # Hidden
+  #     configure :semester_id, :integer         # Hidden
+  #     configure :first_name, :string
+  #     configure :last_name, :string
+  #     configure :user_id, :integer         # Hidden
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -109,27 +109,27 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :hardware_type, :belongs_to_association 
-  #     configure :hardware_status, :belongs_to_association 
-  #     configure :workstation, :belongs_to_association 
-  #     configure :location, :belongs_to_association 
+  #     configure :hardware_type, :belongs_to_association
+  #     configure :hardware_status, :belongs_to_association
+  #     configure :workstation, :belongs_to_association
+  #     configure :location, :belongs_to_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :serial_number, :string 
-  #     configure :aasu_number, :string 
-  #     configure :hardware_type_id, :integer         # Hidden 
-  #     configure :manufacturer, :string 
-  #     configure :model_number, :string 
-  #     configure :assigned_to, :string 
-  #     configure :specs, :text 
-  #     configure :hardware_status_id, :integer         # Hidden 
-  #     configure :hardware_status_comment, :text 
-  #     configure :workstation_id, :integer         # Hidden 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-  #     configure :location_id, :integer         # Hidden 
+  #     configure :id, :integer
+  #     configure :serial_number, :string
+  #     configure :aasu_number, :string
+  #     configure :hardware_type_id, :integer         # Hidden
+  #     configure :manufacturer, :string
+  #     configure :model_number, :string
+  #     configure :assigned_to, :string
+  #     configure :specs, :text
+  #     configure :hardware_status_id, :integer         # Hidden
+  #     configure :hardware_status_comment, :text
+  #     configure :workstation_id, :integer         # Hidden
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
+  #     configure :location_id, :integer         # Hidden
 
   #   # Cross-section configuration:
 
@@ -165,14 +165,14 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :hardwares, :has_many_association 
+  #     configure :hardwares, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-  #     configure :name, :string 
+  #     configure :id, :integer
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
+  #     configure :name, :string
 
   #   # Cross-section configuration:
 
@@ -208,14 +208,14 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :hardwares, :has_many_association 
+  #     configure :hardwares, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -251,23 +251,23 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :semester, :belongs_to_association 
-  #     configure :location, :belongs_to_association 
+  #     configure :semester, :belongs_to_association
+  #     configure :location, :belongs_to_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :monday, :string 
-  #     configure :tuesday, :string 
-  #     configure :wednesday, :string 
-  #     configure :thursday, :string 
-  #     configure :friday, :string 
-  #     configure :saturday, :string 
-  #     configure :sunday, :string 
-  #     configure :semester_id, :integer         # Hidden 
-  #     configure :location_id, :integer         # Hidden 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :monday, :string
+  #     configure :tuesday, :string
+  #     configure :wednesday, :string
+  #     configure :thursday, :string
+  #     configure :friday, :string
+  #     configure :saturday, :string
+  #     configure :sunday, :string
+  #     configure :semester_id, :integer         # Hidden
+  #     configure :location_id, :integer         # Hidden
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -303,19 +303,19 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :installs, :has_many_association 
-  #     configure :softwares, :has_many_association 
-  #     configure :requests, :has_many_association 
+  #     configure :installs, :has_many_association
+  #     configure :softwares, :has_many_association
+  #     configure :requests, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :solicit_start, :datetime 
-  #     configure :submit_deadline, :datetime 
-  #     configure :test_deadline, :datetime 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :solicit_start, :datetime
+  #     configure :submit_deadline, :datetime
+  #     configure :test_deadline, :datetime
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -351,16 +351,16 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :image, :belongs_to_association 
-  #     configure :software, :belongs_to_association 
+  #     configure :image, :belongs_to_association
+  #     configure :software, :belongs_to_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :image_id, :integer         # Hidden 
-  #     configure :software_id, :integer         # Hidden 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :image_id, :integer         # Hidden
+  #     configure :software_id, :integer         # Hidden
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -396,19 +396,19 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :location_type, :belongs_to_association 
-  #     configure :after_hours_accesses, :has_many_association 
-  #     configure :workstations, :has_many_association 
-  #     configure :hours, :has_many_association 
+  #     configure :location_type, :belongs_to_association
+  #     configure :after_hours_accesses, :has_many_association
+  #     configure :workstations, :has_many_association
+  #     configure :hours, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :room, :string 
-  #     configure :location_type_id, :integer         # Hidden 
-  #     configure :comment, :text 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :room, :string
+  #     configure :location_type_id, :integer         # Hidden
+  #     configure :comment, :text
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -444,14 +444,14 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :locations, :has_many_association 
+  #     configure :locations, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -487,27 +487,27 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :software_category, :belongs_to_association 
-  #     configure :request_status, :belongs_to_association 
-  #     configure :user, :belongs_to_association 
-  #     configure :image, :belongs_to_association 
-  #     configure :software, :belongs_to_association 
+  #     configure :software_category, :belongs_to_association
+  #     configure :request_status, :belongs_to_association
+  #     configure :user, :belongs_to_association
+  #     configure :image, :belongs_to_association
+  #     configure :software, :belongs_to_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :year, :date 
-  #     configure :comment, :text 
-  #     configure :software_category_id, :integer         # Hidden 
-  #     configure :source_url, :string 
-  #     configure :instructions, :text 
-  #     configure :request_status_id, :integer         # Hidden 
-  #     configure :user_id, :integer         # Hidden 
-  #     configure :image_id, :integer         # Hidden 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-  #     configure :software_id, :integer         # Hidden 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :year, :date
+  #     configure :comment, :text
+  #     configure :software_category_id, :integer         # Hidden
+  #     configure :source_url, :string
+  #     configure :instructions, :text
+  #     configure :request_status_id, :integer         # Hidden
+  #     configure :user_id, :integer         # Hidden
+  #     configure :image_id, :integer         # Hidden
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
+  #     configure :software_id, :integer         # Hidden
 
   #   # Cross-section configuration:
 
@@ -543,14 +543,14 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :requests, :has_many_association 
+  #     configure :requests, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -586,22 +586,22 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :term, :belongs_to_association 
-  #     configure :after_hours_accesses, :has_many_association 
-  #     configure :hours, :has_many_association 
+  #     configure :term, :belongs_to_association
+  #     configure :after_hours_accesses, :has_many_association
+  #     configure :hours, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :start_date, :date 
-  #     configure :end_date, :date 
-  #     configure :advisement_start, :date 
-  #     configure :term_id, :integer         # Hidden 
-  #     configure :year, :date 
-  #     configure :advisement_end, :date 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-  #     configure :name, :string 
+  #     configure :id, :integer
+  #     configure :start_date, :date
+  #     configure :end_date, :date
+  #     configure :advisement_start, :date
+  #     configure :term_id, :integer         # Hidden
+  #     configure :year, :date
+  #     configure :advisement_end, :date
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
+  #     configure :name, :string
 
   #   # Cross-section configuration:
 
@@ -637,20 +637,20 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :user, :belongs_to_association 
-  #     configure :software, :belongs_to_association 
+  #     configure :user, :belongs_to_association
+  #     configure :software, :belongs_to_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :file_name, :string 
-  #     configure :storage_location, :string 
-  #     configure :creation_date, :date 
-  #     configure :comment, :text 
-  #     configure :user_id, :integer         # Hidden 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-  #     configure :software_id, :integer         # Hidden 
+  #     configure :id, :integer
+  #     configure :file_name, :string
+  #     configure :storage_location, :string
+  #     configure :creation_date, :date
+  #     configure :comment, :text
+  #     configure :user_id, :integer         # Hidden
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
+  #     configure :software_id, :integer         # Hidden
 
   #   # Cross-section configuration:
 
@@ -686,26 +686,26 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :software_category, :belongs_to_association 
-  #     configure :installs, :has_many_association 
-  #     configure :softwares, :has_many_association 
-  #     configure :silent_installs, :has_many_association 
-  #     configure :software_tests, :has_many_association 
-  #     configure :requests, :has_many_association 
+  #     configure :software_category, :belongs_to_association
+  #     configure :installs, :has_many_association
+  #     configure :softwares, :has_many_association
+  #     configure :silent_installs, :has_many_association
+  #     configure :software_tests, :has_many_association
+  #     configure :requests, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :year, :date 
-  #     configure :comment, :text 
-  #     configure :source_url, :string 
-  #     configure :software_category_id, :integer         # Hidden 
-  #     configure :version, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-  #     configure :silent_install_id, :integer 
-  #     configure :software_test_id, :integer 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :year, :date
+  #     configure :comment, :text
+  #     configure :source_url, :string
+  #     configure :software_category_id, :integer         # Hidden
+  #     configure :version, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
+  #     configure :silent_install_id, :integer
+  #     configure :software_test_id, :integer
 
   #   # Cross-section configuration:
 
@@ -741,15 +741,15 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :requests, :has_many_association 
-  #     configure :softwares, :has_many_association 
+  #     configure :requests, :has_many_association
+  #     configure :softwares, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -785,20 +785,20 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :software, :belongs_to_association 
+  #     configure :software, :belongs_to_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :student_tester_id, :integer 
-  #     configure :student_test_date, :date 
-  #     configure :faculty_tester_id, :integer 
-  #     configure :faculty_test_date, :date 
-  #     configure :email_confirmation_date, :date 
-  #     configure :comment, :text 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-  #     configure :software_id, :integer         # Hidden 
+  #     configure :id, :integer
+  #     configure :student_tester_id, :integer
+  #     configure :student_test_date, :date
+  #     configure :faculty_tester_id, :integer
+  #     configure :faculty_test_date, :date
+  #     configure :email_confirmation_date, :date
+  #     configure :comment, :text
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
+  #     configure :software_id, :integer         # Hidden
 
   #   # Cross-section configuration:
 
@@ -834,14 +834,14 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :semesters, :has_many_association 
+  #     configure :semesters, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -881,24 +881,24 @@ RailsAdmin.config do |config|
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :email, :string 
-  #     configure :password, :password         # Hidden 
-  #     configure :password_confirmation, :password         # Hidden 
-  #     configure :reset_password_token, :string         # Hidden 
-  #     configure :reset_password_sent_at, :datetime 
-  #     configure :remember_created_at, :datetime 
-  #     configure :sign_in_count, :integer 
-  #     configure :current_sign_in_at, :datetime 
-  #     configure :last_sign_in_at, :datetime 
-  #     configure :current_sign_in_ip, :string 
-  #     configure :last_sign_in_ip, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-  #     configure :management, :boolean 
-  #     configure :admin, :boolean 
-  #     configure :name, :string 
-  #     configure :non_csit, :boolean 
+  #     configure :id, :integer
+  #     configure :email, :string
+  #     configure :password, :password         # Hidden
+  #     configure :password_confirmation, :password         # Hidden
+  #     configure :reset_password_token, :string         # Hidden
+  #     configure :reset_password_sent_at, :datetime
+  #     configure :remember_created_at, :datetime
+  #     configure :sign_in_count, :integer
+  #     configure :current_sign_in_at, :datetime
+  #     configure :last_sign_in_at, :datetime
+  #     configure :current_sign_in_ip, :string
+  #     configure :last_sign_in_ip, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
+  #     configure :management, :boolean
+  #     configure :admin, :boolean
+  #     configure :name, :string
+  #     configure :non_csit, :boolean
 
   #   # Cross-section configuration:
 
@@ -934,18 +934,18 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :location, :belongs_to_association 
-  #     configure :workstation_type, :belongs_to_association 
-  #     configure :hardwares, :has_many_association 
+  #     configure :location, :belongs_to_association
+  #     configure :workstation_type, :belongs_to_association
+  #     configure :hardwares, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :location_id, :integer         # Hidden 
-  #     configure :number, :integer 
-  #     configure :workstation_type_id, :integer         # Hidden 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :location_id, :integer         # Hidden
+  #     configure :number, :integer
+  #     configure :workstation_type_id, :integer         # Hidden
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -981,14 +981,14 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :workstations, :has_many_association 
+  #     configure :workstations, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
