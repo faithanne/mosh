@@ -22,7 +22,7 @@
 
 <p>
   <b>Software category:</b>
-  <%= @software.software_category_id %>
+  <%= @software.software_category.name %>
 </p>
 
 <p>
@@ -32,12 +32,12 @@
 
 <p>
   <b>Silent Install:</b>
-  <%= @software.silent_install_id %>
+  <%= @software.silent_install.name %>
 </p>
 
 <p>
   <b>Software Test:</b>
-  <%= @software.software_test_id %>
+  <%= @software.software_test.name %>
 </p>
 
 
