@@ -1,4 +1,6 @@
 Mosh::Application.routes.draw do
+  get "poster/index"
+
   resources :installs
 
 
@@ -61,7 +63,9 @@ Mosh::Application.routes.draw do
 
 
   resources :images
+  
+  resources :home
 
 
-  root to: 'images#index'
+  root to: 'home#index'
 end
