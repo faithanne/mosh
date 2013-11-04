@@ -6,7 +6,7 @@
     <th>Semester</th>
     <th>First name</th>
     <th>Last name</th>
-    <th>User</th>
+    <th>Authorized By</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,11 +14,11 @@
 
 <% @after_hours_accesses.each do |after_hours_access| %>
   <tr>
-    <td><%= after_hours_access.location_id %></td>
-    <td><%= after_hours_access.semester_id %></td>
+    <td><%= link_to after_hours_access.location.name, after_hours_access.location %></td>
+    <td><%= link_to after_hours_access.semester.name, after_hours_access.semester %></td>
     <td><%= after_hours_access.first_name %></td>
     <td><%= after_hours_access.last_name %></td>
-    <td><%= after_hours_access.user_id %></td>
+    <td><%= after_hours_access.user.name %></td>
     <td><%= link_to 'Show', after_hours_access %></td>
     <td><%= link_to 'Edit', edit_after_hours_access_path(after_hours_access) %></td>
     <td><%= link_to 'Destroy', after_hours_access, method: :delete, data: { confirm: 'Are you sure?' } %></td>
