@@ -1,4 +1,5 @@
 class PosterController < ApplicationController
-  def index
-  end
+ def get
+	@file = File.new
+ end
 end
