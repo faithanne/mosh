@@ -1,2 +1,2 @@
-module TestHomeHelper
+module HomeHelper
 end
