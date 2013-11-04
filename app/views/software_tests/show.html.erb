@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Software test:</b>
+  <%= @software_test.name %>
+</p>
+
+<p>
   <b>Student tester:</b>
-  <%= @software_test.student_tester_id %>
+  <%= @software_test.student_tester.name %>
 </p>
 
 <p>
@@ -12,7 +17,7 @@
 
 <p>
   <b>Faculty tester:</b>
-  <%= @software_test.faculty_tester_id %>
+  <%= @software_test.faculty_tester.name %>
 </p>
 
 <p>
@@ -32,7 +37,7 @@
 
 <p>
   <b>Software:</b>
-  <%= @software_test.software_id %>
+  <%= @software_test.software.name %>
 </p>
 
 
