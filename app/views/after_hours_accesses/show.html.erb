@@ -2,12 +2,12 @@
 
 <p>
   <b>Location:</b>
-  <%= @after_hours_access.location_id %>
+  <%= @after_hours_access.location.name %>
 </p>
 
 <p>
   <b>Semester:</b>
-  <%= @after_hours_access.semester_id %>
+  <%= @after_hours_access.semester.name %>
 </p>
 
 <p>
@@ -21,8 +21,8 @@
 </p>
 
 <p>
-  <b>User:</b>
-  <%= @after_hours_access.user_id %>
+  <b>Authorized by:</b>
+  <%= @after_hours_access.user.name %>
 </p>
 
 
