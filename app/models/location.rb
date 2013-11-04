@@ -1,5 +1,5 @@
 class Location < ActiveRecord::Base
-  attr_accessible :comment, :location_type_id, :room
+  attr_accessible :comment, :location_type_id, :room, :name
   belongs_to :location_type
   has_many :after_hours_accesses
   has_many :workstations
