@@ -1,4 +1,5 @@
 <%= simple_form_for(@location, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :name %>
   <%= f.input :room %>
   <%= f.association :location_type %>
   <%= f.input :comment %>
