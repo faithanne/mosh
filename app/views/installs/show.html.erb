@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Name:</b>
+  <%= @install.name %>
+</p>
+
+<p>
   <b>Image:</b>
-  <%= @install.image_id %>
+  <%= @install.image.name %>
 </p>
 
 <p>
   <b>Software:</b>
-  <%= @install.software_id %>
+  <%= @install.software.name %>
 </p>
 
 

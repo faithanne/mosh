@@ -1,5 +1,6 @@
 <%= simple_form_for(@install, html: { class: 'form-horizontal' }) do |f| %>
-    <%= f.association :image %>
-    <%= f.association :software %>
-    <%= f.button :submit %>
+  <%= f.input :name %>
+  <%= f.association :image %>
+  <%= f.association :software %>
+  <%= f.button :submit %>
 <% end %>
