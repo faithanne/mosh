@@ -37,12 +37,12 @@
 
 <p>
   <b>Semester:</b>
-  <%= @hour.semester.name %>
+  <%= link_to @hour.semester.name, @hour.semester %>
 </p>
 
 <p>
   <b>Location:</b>
-  <%= @hour.location.name %>
+  <%= link_to @hour.location.name, @hour.location %>
 </p>
 
 

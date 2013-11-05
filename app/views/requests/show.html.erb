@@ -42,12 +42,12 @@
 
 <p>
   <b>Image:</b>
-  <%= @request.image.name %>
+  <%= link_to @request.image.name, @request.image %>
 </p>
 
 <p>
   <b>Software:</b>
-  <%= @request.software.name %>
+  <%= link_to @request.software.name, @request.software %>
 </p>
 
 

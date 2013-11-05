@@ -2,12 +2,12 @@
 
 <p>
   <b>Location:</b>
-  <%= @after_hours_access.location.name %>
+  <%= link_to @after_hours_access.location.name, @after_hours_access.location %>
 </p>
 
 <p>
   <b>Semester:</b>
-  <%= @after_hours_access.semester.name %>
+  <%= link_to @after_hours_access.semester.name, @after_hours_access.semester %>
 </p>
 
 <p>
