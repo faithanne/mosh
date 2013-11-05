@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Location:</b>
   <%= link_to @after_hours_access.location.name, @after_hours_access.location %>
@@ -18,6 +16,11 @@
 <p>
   <b>Last name:</b>
   <%= @after_hours_access.last_name %>
+</p>
+
+<p>
+  <b>Student ID:</b>
+  <%= show_sid(@after_hours_access.sid) %>
 </p>
 
 <p>

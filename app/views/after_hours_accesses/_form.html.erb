@@ -3,6 +3,7 @@
   <%= f.association :semester, label_method: :name, value_method: :id %>
   <%= f.input :first_name, label: 'First Name' %>
   <%= f.input :last_name , label: 'Last Name' %>
+  <%= f.input :sid, label: 'Student ID' %>
   <%= f.association :user, label: 'Authorized By', label_method: :email, value_method: :id %>
   <%= f.button :submit %>
 <% end %>

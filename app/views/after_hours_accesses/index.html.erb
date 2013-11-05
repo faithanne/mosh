@@ -6,6 +6,7 @@
     <th>Semester</th>
     <th>First name</th>
     <th>Last name</th>
+    <th>Student ID</th>
     <th>Authorized By</th>
     <th></th>
     <th></th>
@@ -18,6 +19,7 @@
     <td><%= link_to after_hours_access.semester.name, after_hours_access.semester %></td>
     <td><%= after_hours_access.first_name %></td>
     <td><%= after_hours_access.last_name %></td>
+    <td><%= show_sid(after_hours_access.sid) %></td>
     <td><%= after_hours_access.user.name %></td>
     <td><%= link_to 'Show', after_hours_access %></td>
     <td><%= link_to 'Edit', edit_after_hours_access_path(after_hours_access) %></td>
