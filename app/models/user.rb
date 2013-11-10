@@ -11,4 +11,9 @@ class User < ActiveRecord::Base
 
   validates :password, presence: :true, length: { minimum: 8, maximum: 120 }, on: :create
   validates :password, on: :update, length: {minimum: 8, maximum: 120}, allow_blank: true
+
+  has_many :after_hours_accesses
+  has_many :requests
+  has_many :silent_installs
+  has_many :software_tests
 end
