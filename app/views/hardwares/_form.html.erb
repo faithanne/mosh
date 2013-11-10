@@ -10,6 +10,5 @@
   <%= f.association :hardware_status %>
   <%= f.input :hardware_status_comment %>
   <%= f.association :workstation, label: 'Workstation', label_method: :number, value_method: :id %>
-  <%= f.association :location, label_method: :room, value_method: :id %>
   <%= f.button :submit %>
 <% end %>

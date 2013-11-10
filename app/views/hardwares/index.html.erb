@@ -13,7 +13,6 @@
     <th>Hardware status</th>
     <th>Hardware status comment</th>
     <th>Workstation</th>
-    <th>Location</th>
     <th></th>
     <th></th>
     <th></th>
@@ -32,7 +31,6 @@
     <td><%= hardware.hardware_status.name %></td>
     <td><%= hardware.hardware_status_comment %></td>
     <td><%= link_to hardware.workstation.number, hardware.workstation %></td>
-    <td><%= link_to hardware.location.name, hardware.location %></td>
     <td><%= link_to 'Show', hardware %></td>
     <td><%= link_to 'Edit', edit_hardware_path(hardware) %></td>
     <td><%= link_to 'Destroy', hardware, method: :delete, data: { confirm: 'Are you sure?' } %></td>
