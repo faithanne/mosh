@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131110044455) do
+ActiveRecord::Schema.define(:version => 20131110044901) do
 
   create_table "after_hours_accesses", :force => true do |t|
     t.integer  "location_id"
@@ -183,7 +183,6 @@ ActiveRecord::Schema.define(:version => 20131110044455) do
     t.string   "version"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
-    t.integer  "silent_install_id"
     t.integer  "software_test_id"
   end
 
