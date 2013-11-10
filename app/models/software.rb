@@ -5,4 +5,5 @@ class Software < ActiveRecord::Base
   belongs_to :software_category
   has_many :requests
   has_many :software_tests
+  has_many :silent_installs
 end
