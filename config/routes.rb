@@ -1,6 +1,11 @@
 Mosh::Application.routes.draw do
+  resources :posters
+
+
   get "poster/index"
 
+  resources :poster
+  
   resources :installs
 
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130826205431) do
+ActiveRecord::Schema.define(:version => 20131112225439) do
 
   create_table "after_hours_accesses", :force => true do |t|
     t.integer  "location_id"
@@ -93,6 +93,18 @@ ActiveRecord::Schema.define(:version => 20130826205431) do
     t.text     "comment"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+  end
+
+  create_table "posters", :force => true do |t|
+    t.string   "name"
+    t.datetime "date_needed"
+    t.text     "special_request"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "request_statuses", :force => true do |t|

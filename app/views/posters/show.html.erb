@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <b>Name:</b>
+  <%= @poster.name %>
+</p>
+
+<p>
+  <b>Date needed:</b>
+  <%= @poster.date_needed %>
+</p>
+
+<p>
+  <b>Special request:</b>
+  <%= @poster.special_request %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @poster.created_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_poster_path(@poster) %> |
+<%= link_to 'Back', posters_path %>
