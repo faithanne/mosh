@@ -1,4 +1,11 @@
 Mosh::Application.routes.draw do
+  resources :posters
+
+
+  get "poster/index"
+
+  resources :poster
+  
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   resources :installs
@@ -63,7 +70,8 @@ Mosh::Application.routes.draw do
 
 
   resources :images
+  
+  resources :home
 
-
-  root to: 'images#index'
+  root to: 'home#index'
 end
