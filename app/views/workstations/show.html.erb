@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Workstation name:</b>
+  <%= @workstation.name %>
+</p>
+
+<p>
   <b>Location:</b>
-  <%= @workstation.location_id %>
+  <%= link_to @workstation.location.name, @workstation.location %>
 </p>
 
 <p>
@@ -12,7 +17,7 @@
 
 <p>
   <b>Workstation type:</b>
-  <%= @workstation.workstation_type_id %>
+  <%= @workstation.workstation_type.name %>
 </p>
 
 

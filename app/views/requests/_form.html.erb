@@ -2,11 +2,10 @@
   <%= f.input :name, label: 'Software name' %>
   <%= f.input :year %>
   <%= f.input :comment %>
-  <%= f.association :software_category %>
   <%= f.input :source_url %>
   <%= f.input :instructions %>
   <%= f.association :request_status %>
-  <%= f.association :user, label_method: :email, label: 'Requested by', value_method: :id %>
+  <%= f.association :user, label_method: :name, label: 'Requested by', value_method: :id %>
   <%= f.association :image %>
   <%= f.association :software %>
   <%= f.button :submit %>

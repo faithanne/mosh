@@ -1,4 +1,5 @@
 <%= simple_form_for(@hardware, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :name, label: 'Hardware Name' %>
   <%= f.input :serial_number, label: 'Serial Number' %>
   <%= f.input :aasu_number, label: 'AASU Number' %>
   <%= f.association :hardware_type %>
@@ -9,6 +10,5 @@
   <%= f.association :hardware_status %>
   <%= f.input :hardware_status_comment %>
   <%= f.association :workstation, label: 'Workstation', label_method: :number, value_method: :id %>
-  <%= f.association :location, label_method: :room, value_method: :id %>
   <%= f.button :submit %>
 <% end %>

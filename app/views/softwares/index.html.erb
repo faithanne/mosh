@@ -8,8 +8,6 @@
     <th>Source url</th>
     <th>Software category</th>
     <th>Version</th>
-    <th>Silent Install</th>
-    <th>Software Test</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,10 +19,8 @@
     <td><%= software.year %></td>
     <td><%= software.comment %></td>
     <td><%= software.source_url %></td>
-    <td><%= software.software_category_id %></td>
+    <td><%= software.software_category.name %></td>
     <td><%= software.version %></td>
-    <td><%= software.silent_install_id %></td>
-    <td><%= software.software_test_id %></td>
     <td><%= link_to 'Show', software %></td>
     <td><%= link_to 'Edit', edit_software_path(software) %></td>
     <td><%= link_to 'Destroy', software, method: :delete, data: { confirm: 'Are you sure?' } %></td>

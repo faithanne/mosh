@@ -1,5 +1,5 @@
 class Install < ActiveRecord::Base
-  attr_accessible :image_id, :software_id
+  attr_accessible :image_id, :software_id, :name
   belongs_to :image
   belongs_to :software
 end

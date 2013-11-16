@@ -21,20 +21,19 @@
 </p>
 
 <p>
+  <b>Advisement end:</b>
+  <%= @semester.advisement_end %>
+</p>
+
+<p>
   <b>Term:</b>
-  <%= @semester.term_id %>
+  <%= @semester.term.name %>
 </p>
 
 <p>
   <b>Year:</b>
   <%= @semester.year %>
 </p>
-
-<p>
-  <b>Advisement end:</b>
-  <%= @semester.advisement_end %>
-</p>
-
 
 <%= link_to 'Edit', edit_semester_path(@semester) %> |
 <%= link_to 'Back', semesters_path %>

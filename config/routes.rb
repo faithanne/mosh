@@ -6,6 +6,8 @@ Mosh::Application.routes.draw do
 
   resources :poster
   
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   resources :installs
 
 

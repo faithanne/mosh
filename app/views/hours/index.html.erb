@@ -25,8 +25,8 @@
     <td><%= hour.friday %></td>
     <td><%= hour.saturday %></td>
     <td><%= hour.sunday %></td>
-    <td><%= hour.semester_id %></td>
-    <td><%= hour.location_id %></td>
+    <td><%= link_to hour.semester.name, hour.semester %></td>
+    <td><%= link_to hour.location, hour.location %></td>
     <td><%= link_to 'Show', hour %></td>
     <td><%= link_to 'Edit', edit_hour_path(hour) %></td>
     <td><%= link_to 'Destroy', hour, method: :delete, data: { confirm: 'Are you sure?' } %></td>

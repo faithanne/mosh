@@ -1,4 +1,9 @@
 class TermsController < ApplicationController
+
+require "#{Rails.root}/lib/mosh_modules/management_module"
+include MoshModules::ManagementModule
+before_filter :management_filter
+
   # GET /terms
   # GET /terms.json
   def index

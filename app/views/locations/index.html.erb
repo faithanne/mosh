@@ -2,6 +2,7 @@
 
 <table class="table table-bordered table-striped">
   <tr>
+    <th>Location name</th>
     <th>Room</th>
     <th>Location type</th>
     <th>Comment</th>
@@ -12,8 +13,9 @@
 
 <% @locations.each do |location| %>
   <tr>
+    <td><%= location.name %></td>
     <td><%= location.room %></td>
-    <td><%= location.location_type_id %></td>
+    <td><%= location.location_type.name %></td>
     <td><%= location.comment %></td>
     <td><%= link_to 'Show', location %></td>
     <td><%= link_to 'Edit', edit_location_path(location) %></td>

@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Install name:</b>
+  <%= @install.name %>
+</p>
+
+<p>
   <b>Image:</b>
-  <%= @install.image_id %>
+  <%= link_to @install.image.name, @install.image %>
 </p>
 
 <p>
   <b>Software:</b>
-  <%= @install.software_id %>
+  <%= link_to @install.software.name, @install.software %>
 </p>
 
 

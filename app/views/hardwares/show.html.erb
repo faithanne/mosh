@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Hardware name:</b>
+  <%= @hardware.name %>
+</p>
+
+<p>
   <b>Serial number:</b>
   <%= @hardware.serial_number %>
 </p>
@@ -12,7 +17,7 @@
 
 <p>
   <b>Hardware type:</b>
-  <%= @hardware.hardware_type_id %>
+  <%= @hardware.hardware_type.name %>
 </p>
 
 <p>
@@ -37,7 +42,7 @@
 
 <p>
   <b>Hardware status:</b>
-  <%= @hardware.hardware_status_id %>
+  <%= @hardware.hardware_status.name %>
 </p>
 
 <p>
@@ -47,14 +52,8 @@
 
 <p>
   <b>Workstation:</b>
-  <%= @hardware.workstation_id %>
+  <%= link_to @hardware.workstation.name, @hardware.workstation %>
 </p>
-
-<p>
-  <b>Location:</b>
-  <%= @hardware.location_id %>
-</p>
-
 
 <%= link_to 'Edit', edit_hardware_path(@hardware) %> |
 <%= link_to 'Back', hardwares_path %>

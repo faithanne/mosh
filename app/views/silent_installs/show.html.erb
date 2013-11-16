@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Silent Install Name:</b>
+  <%= @silent_install.name %>
+</p>
+
+<p>
   <b>File name:</b>
   <%= @silent_install.file_name %>
 </p>
@@ -22,12 +27,12 @@
 
 <p>
   <b>User:</b>
-  <%= @silent_install.user_id %>
+  <%= @silent_install.user.name %>
 </p>
 
 <p>
   <b>Software:</b>
-  <%= @silent_install.software_id %>
+  <%= link_to @silent_install.software.name, @silent_install.software %>
 </p>
 
 

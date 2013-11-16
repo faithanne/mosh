@@ -1,4 +1,9 @@
 class SoftwareTestsController < ApplicationController
+
+require "#{Rails.root}/lib/mosh_modules/noncsit_filter"
+include MoshModules::NoncsitModule
+before_filter :noncsit_filter
+
   # GET /software_tests
   # GET /software_tests.json
   def index

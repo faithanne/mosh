@@ -2,6 +2,7 @@
 
 <table class="table table-bordered table-striped">
   <tr>
+    <th>Software test name</th>
     <th>Student tester</th>
     <th>Student test date</th>
     <th>Faculty tester</th>
@@ -16,13 +17,14 @@
 
 <% @software_tests.each do |software_test| %>
   <tr>
-    <td><%= software_test.student_tester_id %></td>
+    <td><%= software_test.name %></td>
+    <td><%= software_test.student_tester.name %></td>
     <td><%= software_test.student_test_date %></td>
-    <td><%= software_test.faculty_tester_id %></td>
+    <td><%= software_test.faculty_tester.name %></td>
     <td><%= software_test.faculty_test_date %></td>
     <td><%= software_test.email_confirmation_date %></td>
     <td><%= software_test.comment %></td>
-    <td><%= software_test.software_id %></td>
+    <td><%= link_to software_test.software.name, software_test.software %></td>
     <td><%= link_to 'Show', software_test %></td>
     <td><%= link_to 'Edit', edit_software_test_path(software_test) %></td>
     <td><%= link_to 'Destroy', software_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>

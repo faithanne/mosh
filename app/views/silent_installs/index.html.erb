@@ -2,6 +2,7 @@
 
 <table class="table table-bordered">
   <tr>
+    <th>Silent Install Name</th>
     <th>File name</th>
     <th>Storage location</th>
     <th>Creation date</th>
@@ -15,12 +16,13 @@
 
 <% @silent_installs.each do |silent_install| %>
   <tr>
+    <td><%= silent_install.name %></td>
     <td><%= silent_install.file_name %></td>
     <td><%= silent_install.storage_location %></td>
     <td><%= silent_install.creation_date %></td>
     <td><%= silent_install.comment %></td>
-    <td><%= silent_install.user_id %></td>
-    <td><%= silent_install.software_id %></td>
+    <td><%= silent_install.user.name %></td>
+    <td><%= link_to silent_install.software.name, silent_install.software %></td>
     <td><%= link_to 'Show', silent_install %></td>
     <td><%= link_to 'Edit', edit_silent_install_path(silent_install) %></td>
     <td><%= link_to 'Destroy', silent_install, method: :delete, data: { confirm: 'Are you sure?' } %></td>

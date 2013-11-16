@@ -6,9 +6,9 @@
     <th>Start date</th>
     <th>End date</th>
     <th>Advisement start</th>
+    <th>Advisement end</th>
     <th>Term</th>
     <th>Year</th>
-    <th>Advisement end</th>
     <th></th>
     <th></th>
     <th></th>
@@ -20,9 +20,9 @@
     <td><%= semester.start_date %></td>
     <td><%= semester.end_date %></td>
     <td><%= semester.advisement_start %></td>
-    <td><%= semester.term_id %></td>
-    <td><%= semester.year %></td>
     <td><%= semester.advisement_end %></td>
+    <td><%= semester.term.name %></td>
+    <td><%= semester.year %></td>
     <td><%= link_to 'Show', semester %></td>
     <td><%= link_to 'Edit', edit_semester_path(semester) %></td>
     <td><%= link_to 'Destroy', semester, method: :delete, data: { confirm: 'Are you sure?' } %></td>

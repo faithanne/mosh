@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Location name:</b>
+  <%= @location.name %>
+</p>
+
+<p>
   <b>Room:</b>
   <%= @location.room %>
 </p>
 
 <p>
   <b>Location type:</b>
-  <%= @location.location_type_id %>
+  <%= @location.location_type.name %>
 </p>
 
 <p>

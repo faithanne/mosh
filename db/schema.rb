@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20131112225439) do
     t.integer  "user_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "sid"
   end
 
   create_table "hardware_statuses", :force => true do |t|
@@ -48,7 +49,7 @@ ActiveRecord::Schema.define(:version => 20131112225439) do
     t.integer  "workstation_id"
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
-    t.integer  "location_id"
+    t.string   "name"
   end
 
   create_table "hours", :force => true do |t|
@@ -79,6 +80,7 @@ ActiveRecord::Schema.define(:version => 20131112225439) do
     t.integer  "software_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "name"
   end
 
   create_table "location_types", :force => true do |t|
@@ -93,6 +95,7 @@ ActiveRecord::Schema.define(:version => 20131112225439) do
     t.text     "comment"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.string   "name"
   end
 
   create_table "posters", :force => true do |t|
@@ -107,6 +110,19 @@ ActiveRecord::Schema.define(:version => 20131112225439) do
     t.datetime "image_updated_at"
   end
 
+  create_table "rails_admin_histories", :force => true do |t|
+    t.text     "message"
+    t.string   "username"
+    t.integer  "item"
+    t.string   "table"
+    t.integer  "month",      :limit => 2
+    t.integer  "year",       :limit => 5
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
+
+  add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
   create_table "request_statuses", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -117,14 +133,13 @@ ActiveRecord::Schema.define(:version => 20131112225439) do
     t.string   "name"
     t.date     "year"
     t.text     "comment"
-    t.integer  "software_category_id"
     t.string   "source_url"
     t.text     "instructions"
     t.integer  "request_status_id"
     t.integer  "user_id"
     t.integer  "image_id"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.integer  "software_id"
   end
 
@@ -149,6 +164,7 @@ ActiveRecord::Schema.define(:version => 20131112225439) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.integer  "software_id"
+    t.string   "name"
   end
 
   create_table "software_categories", :force => true do |t|
@@ -167,6 +183,7 @@ ActiveRecord::Schema.define(:version => 20131112225439) do
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
     t.integer  "software_id"
+    t.string   "name"
   end
 
   create_table "softwares", :force => true do |t|
@@ -178,8 +195,6 @@ ActiveRecord::Schema.define(:version => 20131112225439) do
     t.string   "version"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
-    t.integer  "silent_install_id"
-    t.integer  "software_test_id"
   end
 
   create_table "terms", :force => true do |t|
@@ -203,6 +218,8 @@ ActiveRecord::Schema.define(:version => 20131112225439) do
     t.datetime "updated_at",                             :null => false
     t.boolean  "management"
     t.boolean  "admin"
+    t.string   "name"
+    t.boolean  "non_csit"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
@@ -215,11 +232,12 @@ ActiveRecord::Schema.define(:version => 20131112225439) do
   end
 
   create_table "workstations", :force => true do |t|
-    t.integer  "location_id"
     t.integer  "number"
     t.integer  "workstation_type_id"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+    t.string   "name"
+    t.integer  "location_id"
   end
 
 end

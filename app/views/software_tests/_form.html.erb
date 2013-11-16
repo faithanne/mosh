@@ -1,4 +1,5 @@
 <%= simple_form_for(@software_test, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :name %>
   <%= f.association :user, label_method: :email, value_method: :id, label: 'Student tester' %>
   <%= f.input :student_test_date %>
   <%= f.association :user, label_method: :email, value_method: :id, label: 'Faculty tester' %>

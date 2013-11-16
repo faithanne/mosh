@@ -1,4 +1,9 @@
 class LocationsController < ApplicationController
+
+require "#{Rails.root}/lib/mosh_modules/management_module"
+include MoshModules::ManagementModule
+before_filter :management_filter
+
   # GET /locations
   # GET /locations.json
   def index

@@ -1,13 +1,11 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Location:</b>
-  <%= @after_hours_access.location_id %>
+  <%= link_to @after_hours_access.location.name, @after_hours_access.location %>
 </p>
 
 <p>
   <b>Semester:</b>
-  <%= @after_hours_access.semester_id %>
+  <%= link_to @after_hours_access.semester.name, @after_hours_access.semester %>
 </p>
 
 <p>
@@ -21,8 +19,13 @@
 </p>
 
 <p>
-  <b>User:</b>
-  <%= @after_hours_access.user_id %>
+  <b>Student ID:</b>
+  <%= show_sid(@after_hours_access.sid) %>
+</p>
+
+<p>
+  <b>Authorized by:</b>
+  <%= @after_hours_access.user.name %>
 </p>
 
 

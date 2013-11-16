@@ -16,11 +16,6 @@
 </p>
 
 <p>
-  <b>Software category:</b>
-  <%= @request.software_category_id %>
-</p>
-
-<p>
   <b>Source url:</b>
   <%= @request.source_url %>
 </p>
@@ -32,22 +27,22 @@
 
 <p>
   <b>Request status:</b>
-  <%= @request.request_status_id %>
+  <%= @request.request_status.name %>
 </p>
 
 <p>
   <b>User:</b>
-  <%= @request.user_id %>
+  <%= @request.user.name %>
 </p>
 
 <p>
   <b>Image:</b>
-  <%= @request.image_id %>
+  <%= link_to @request.image.name, @request.image %>
 </p>
 
 <p>
   <b>Software:</b>
-  <%= @request.software_id %>
+  <%= link_to @request.software.name, @request.software %>
 </p>
 
 

@@ -1,4 +1,9 @@
 class HoursController < ApplicationController
+
+require "#{Rails.root}/lib/mosh_modules/noncsit_module"
+include MoshModules::NoncsitModule
+before_filter :noncsit_filter
+
   # GET /hours
   # GET /hours.json
   def index

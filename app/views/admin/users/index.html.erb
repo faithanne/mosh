@@ -1,5 +1,7 @@
 <h2>Users</h2>
 
+<%= link_to 'Create New User', new_admin_user_path, class: 'btn btn-small btn-success' %>
+
 <table class="table table-bordered table-striped">
   <tr>
     <th>Name</th>
@@ -14,18 +16,19 @@
     <th></th>
   </tr>
 
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-    <td><%= user.email %></td>
-    <td><%= user.management %></td>
-    <td><%= user.admin %></td>
-    <td><%= user.created_at %></td>
-    <td><%= user.last_sign_in_at %></td>
-    <td><%= user.last_sign_in_ip %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_admin_user(admin, user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</tr>
-<% end %>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.management %></td>
+      <td><%= user.admin %></td>
+      <td><%= user.non_csit %></td>
+      <td><%= user.created_at %></td>
+      <td><%= user.last_sign_in_at %></td>
+      <td><%= user.last_sign_in_ip %></td>
+      <td><%= link_to 'Show', admin_user_path(user) %></td>
+      <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
+      <td><%= link_to 'Destroy', admin_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
 </table>
