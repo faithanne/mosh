@@ -57,3 +57,12 @@
 	width: 100%;
 	padding: 10px 0px 10px 15px;
 }
+
+
+.comment-box ol
+{
+	list-style-type: none;
+	padding: 0px;
+	margin: -15px 0px 15px 10px;
+} 
+ //the top-margin of -15px is because bootstrap has its own bottom margin for links

@@ -14,6 +14,5 @@ class User < ActiveRecord::Base
 
   has_many :after_hours_accesses
   has_many :requests
-  has_many :silent_installs
-  has_many :software_tests
+  has_many :silent_installs 
 end

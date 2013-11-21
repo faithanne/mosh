@@ -28,3 +28,4 @@ gem 'font-awesome-rails'
 gem 'bootswatch-rails'
 gem 'simple_form'
 gem 'rails_admin'
+
