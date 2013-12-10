@@ -21,6 +21,13 @@
   <%= @poster.created_at %>
 </p>
 
+<p>
+	<b>Image Location</b>
+	<%if @poster.image? %>
+		<br />
+		<%= link_to @poster.image.url, @poster.image.url %>
+	<% end %>
+</p>
 
 <%= link_to 'Edit', edit_poster_path(@poster) %> |
 <%= link_to 'Back', posters_path %>

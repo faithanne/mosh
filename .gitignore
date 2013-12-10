@@ -16,3 +16,5 @@
 
 #gemFile.lock
 Gemfile.lock
+
+/public/system/*
